@@ -1,19 +1,21 @@
 export async function fetchGiveaway(id) {
   try {
     // استبدال URL بـ Proxy الخاص بـ Next.js
-    const res = await fetch(`/api/giveaway/${id}`);
+    const res = await fetch(/api/giveaway/${id});
 
     if (!res.ok) {
-      throw new Error(`Failed to fetch giveaway data: ${res.status} ${res.statusText}`);
+      throw new Error("Failed to fetch data");
     }
 
     const data = await res.json();
     return data;
+
   } catch (error) {
-    console.error("Error fetching giveaway data:", error.message);
-    throw error; // إعادة طرح الخطأ لمزيد من المعالجة
+    console.error("Error fetching giveaway data:", error);
+    throw error;
   }
 }
+
 
 export async function fetchGiveaways() {
   try {
@@ -21,13 +23,14 @@ export async function fetchGiveaways() {
     const res = await fetch('/api/giveaways');
 
     if (!res.ok) {
-      throw new Error(`Failed to fetch giveaways data: ${res.status} ${res.statusText}`);
+      throw new Error("Failed to fetch data");
     }
 
     const data = await res.json();
     return data;
+
   } catch (error) {
-    console.error("Error fetching giveaways data:", error.message);
-    throw error; // إعادة طرح الخطأ لمزيد من المعالجة
+    console.error("Error fetching giveaways data:", error);
+    throw error;
   }
 }
