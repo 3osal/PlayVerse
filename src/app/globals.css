@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #101014;
+  color: #cbc9ca;
+}
+
+.hero {
+  background-image: url('../public/1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.container {
+  @apply mx-auto my-0;
+  padding: 0 25px;
+}
+
+.transition-all {
+  transition: all .3s ease;
+}
