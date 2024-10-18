@@ -17,7 +17,7 @@ const NavBar = () => {
           <Link href="/" className="text-[30px] capitalize font-bold">
             play
             <span className="text-Primary_Color inline-block capitalize">
-              verse
+              versel
             </span>
           </Link>
         </div>
